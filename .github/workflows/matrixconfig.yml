@@ -18,8 +18,9 @@ jobs:
           - images: alpine
             os: windows-latest
     runs-on: ${{matrix.os}}
-
+    timeout-minutes: 1
     steps:
+        
       - name: Echo Docker Details
         run: docker info
       - name: Run Image
